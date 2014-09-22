@@ -69,8 +69,10 @@ $ClientBillingDetails.POCC = "POCC for Powershell"            #ADD YOUR Value
 $ClientCreateMessage.Billing = $ClientBillingDetails
 
 write-host "Client Contact Detail"
+$date = get-date -Format yy-MM-dd_HH-mm-ss #Date for incremental firstname & ConfName later also
 $ClientContactDetail = New-Object "profiles.ContactDetail"
-$ClientContactDetail.FirstName = "Mattias"                   #ADD YOUR Value
+#$ClientContactDetail.FirstName = "Mattias"                   #ADD YOUR Value
+$ClientContactDetail.FirstName = $date
 $ClientContactDetail.LastName = "Johnsson"                   #ADD YOUR Value
 $ClientContactDetail.email= "mattias@pgi.com"                #ADD YOUR Value
 $ClientContactDetail.PhoneIntlPrefix = "+46"                 #ADD YOUR Value
